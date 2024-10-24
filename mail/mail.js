@@ -1,12 +1,17 @@
+import nodemailer from 'nodemailer';
+
+var transporter;
+var userEmail;
+
 export function authMail(service, user, password) {
-    var nodemailer = require('nodemailer');
-    var transporter = nodemailer.createTransport({
+    transporter = nodemailer.createTransport({
         service: service,
         auth: {
             user: user,
-            password: password,
+            pass: password,
         }
-});
-userEmail = user;
+    });
+    userEmail = user;
 }
-export {transporter, userEmail};
+
+export { transporter, userEmail };

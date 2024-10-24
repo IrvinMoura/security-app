@@ -1,4 +1,4 @@
-import {transporter, userEmail} from './mail';
+import {transporter, userEmail} from './mail.js';
 
 export function sendMail(to, subject, text) {
     var mailOptions = {
