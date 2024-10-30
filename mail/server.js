@@ -1,10 +1,10 @@
-// import { sendMail } from "./sendMail.js";
 import { storeCodeAndSendEmail } from "./codeManager.js";
-import express from 'express';
-import nodemailer from 'nodemailer';
-import dotenv from 'dotenv';
-import { fileURLToPath } from 'url'; // Importando url
-import { dirname, join } from 'path'; // Importando path
+import { validateCode } from "./verifyCode.js";
+import express from "express";
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -48,26 +48,41 @@ app.post("/send-mail", (req, res) => {
 
     try {
         storeCodeAndSendEmail(transporter, to, subject, text);
-        res.status(200).json({ message: 'Email enviado com sucesso!' });
+        res.status(200).json({ message: "Email enviado com sucesso!" });
     } catch (error) {
-        console.error('Erro ao configurar o email:', error);
-        res.status(500).json({ error: 'Erro ao enviar o email.' });
+        console.error("Erro ao configurar o email:", error);
+        res.status(500).json({ error: "Erro ao enviar o email." });
     }
 });
 
-// Servidor
-app.use(express.static(join(__dirname, '..', 'views')));
+app.post("/validate-code", (req, res) => {
+    const { code } = req.body;
+
+    if (!code) {
+        return res.status(400).json({ message: "Código não fornecido." });
+    }
+
+    const isValid = validateCode(code);
+
+    if (isValid) {
+        res.json({ message: "Código validado com sucesso!" });
+    } else {
+        res.status(401).json({ message: "Código inválido." });
+    }
+});
+
+app.use(express.static(join(__dirname, "..", "views")));
 
 app.get("/", (req, res) => {
-    res.sendFile(join(__dirname, 'views', 'index.html'));
+    res.sendFile(join(__dirname, "views", "index.html"));
 });
 
 app.get("/newPassword", (req, res) => {
-    res.sendFile(join(__dirname, 'views', 'newPassword.html'));
+    res.sendFile(join(__dirname, "views", "newPassword.html"));
 });
 
 app.get("/verifyToken", (req, res) => {
-    res.sendFile(join(__dirname, 'views', 'verifyToken.html'));
+    res.sendFile(join(__dirname, "views", "verifyToken.html"));
 });
 
 app.listen(PORT, () => {

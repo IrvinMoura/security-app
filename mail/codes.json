@@ -1,0 +1,81 @@
+{
+  "4v1pQW": {
+    "iv": "ea4381c7ad09f50a4617267c65ea0d6a",
+    "key": "e606e0597e4c2c0b3765eade614f188c80a17904fb1fd9a32821636bcd292da9",
+    "encryptedData": "d0bc24e6d92151a117fcc9dce7d75944"
+  },
+  "Ijf3sg": {
+    "iv": "fe38ce5975f7e3997866a26290c4ad3a",
+    "key": "e72cc7c94ffb5d02cea38354f979a159cfdedf36bb095e903b1d983b7c75692e",
+    "encryptedData": "923c734a211220c871205f976014210a"
+  },
+  "SeAlBc": {
+    "iv": "96e39c3388323617fcf4e3cc70616d03",
+    "key": "5e430500cb313ce722fe916369cadecb573ef3f0c6184b4eaa7a3018b434cde6",
+    "encryptedData": "13eed0187edbdcb064c845b00a2ea721"
+  },
+  "vs7Ufd": {
+    "iv": "a6ffe9035d11917f4aab73a5e67fd1c6",
+    "key": "7804d3a60016e2ffc00ebb4ea93a7b8581ff5c93b49f8618286612df4d899cf9",
+    "encryptedData": "68eeb86015f447e7b8f101100eed5720",
+    "timestamp": 1730298543197,
+    "validityDuration": 60000
+  },
+  "LCFOO1": {
+    "iv": "b3aa68a9e8176acc6ddc2a460271497c",
+    "key": "7f229bc7027ceb2e9ebbe1704f89ba05262483c8dcebb2363479922619166a87",
+    "encryptedData": "1dbd58d66c68972596003257ad9132e7",
+    "timestamp": 1730298772927,
+    "validityDuration": 60000
+  },
+  "3V1RxP": {
+    "iv": "57e521a822a44c2c8862863bdaf4f2cb",
+    "key": "f8bb15b06a5df3f33e380cd2e56c0ea6f3001a2bf101460b31f991bf0df3cec9",
+    "encryptedData": "e016308a3259ebf9a85042a2531fba05",
+    "timestamp": 1730300854379,
+    "validityDuration": 600000
+  },
+  "YFrvJv": {
+    "iv": "93510ce94274ecafa79005ee7a452bab",
+    "key": "f0cd858ba26070f1fe8abd3d2110039f86bbff90a04ee5611969fb8d532a2c8e",
+    "encryptedData": "014f4b20fec254b04cade027edaa3cdc",
+    "timestamp": 1730300885988,
+    "validityDuration": 600000
+  },
+  "9eyD3S": {
+    "iv": "42acd17bec42b745d0f7aae4ef8f36d8",
+    "key": "b4f77602dc8ead8100ebafc99c06b5b2c519ff723475ad2b5061d95cc3023910",
+    "encryptedData": "d4d4f4d0877496897991e61e70d965b1",
+    "timestamp": 1730300935942,
+    "validityDuration": 600000
+  },
+  "JZG8u4": {
+    "iv": "a7288bdd0cee30ea88c896b8a481d871",
+    "key": "994afa0f5a2457d4fa2c4f525d4c426eb130f1e6df9aff787e4c392dee8abb97",
+    "encryptedData": "8642cf376fce6a5b7e026e0459dfd9c5",
+    "timestamp": 1730300995812,
+    "validityDuration": 600000
+  },
+  "iDj9aK": {
+    "iv": "1eeed6465273c2d5c301711d0039bc44",
+    "key": "1e2c10bc3774f83ba45f61c4f1ce57491558091a3d231153970757f76676b919",
+    "encryptedData": "002f41852bf9745d3c05c0864e26fc53",
+    "timestamp": 1730301148085,
+    "validityDuration": 600000
+  },
+  "VuirlU": {
+    "iv": "84e17475defbfeb63fdbc2a34ec24f34",
+    "key": "d05c234f5ec8ce74a0f2ab75f62b8f3712500e56a678d1430aaf9d9be09d08e4",
+    "encryptedData": "0c7575e04d92ecdd2e1ec1267095640f",
+    "timestamp": 1730301284076,
+    "validityDuration": 600000
+  },
+  "zjp500@gmail.com": {
+    "code": "Z6NMVW",
+    "iv": "c485b8cc71858665ee8a71bc33d59deb",
+    "key": "125d55f91143d4cf5765fe687e9b30b780c1e8f009546cabd7554629f64f3b91",
+    "encryptedData": "2ff94e9afb3f81e8d07c3f270d86e676",
+    "timestamp": 1730304657141,
+    "validityDuration": 600000
+  }
+}

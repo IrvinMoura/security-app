@@ -7,14 +7,42 @@
 </head>
 <body>
     <h2>Verificar Token</h2>
-    <form id="verifyToken">
-        <label for="token">Digite o token</label>
-        <input type="text" name="token" id="token">
+    <form id="verifyCode">
+        <label for="code">Digite o código</label>
+        <input type="text" name="code" id="code">
         <button type="submit">Enviar</button>
     </form>
 
     <script>
+        document.getElementById("verifyCode").addEventListener("submit", async (event) => {
+            event.preventDefault();
 
+            const inputCode = document.getElementById("code").value;
+
+            if (inputCode == null || inputCode == "") {
+                alert("Por favor, insira o código para validação");
+                return;
+            }
+
+            try {
+                const response = await fetch("http://localhost:3000/validate-code", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type" : "application/json"
+                    },
+                    body: JSON.stringify({ code: inputCode })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    window.location.href = "newPassword.html";
+                }
+
+            } catch (error) {
+                console.log("Error", error);
+            }
+        });
     </script>
 </body>
 </html>

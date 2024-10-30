@@ -21,20 +21,20 @@
             return regex.test(email);
         }
 
-        document.getElementById('sendForm').addEventListener('submit', async (event) => {
+        document.getElementById("sendForm").addEventListener("submit", async (event) => {
             event.preventDefault();
 
-            const to = document.getElementById('to').value;
+            const to = document.getElementById("to").value;
 
             if (!validarEmail(to)) {
-                alert('Por favor, insira um endereço de email válido.');
+                alert("Por favor, insira um endereço de email válido.");
                 return;
             }
 
             try {
-                const response = await fetch('http://localhost:3000/send-mail', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                const response = await fetch("http://localhost:3000/send-mail", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ to })
                 });
 
@@ -42,11 +42,11 @@
                 alert(result.message);
 
                 if (response.ok) {
-                    window.location.href = 'verifyToken.html';
+                    window.location.href = "verifyToken.html";
                 }
 
             } catch (error) {
-                alert('Erro ao enviar email.');
+                alert("Erro ao enviar email.");
             }
         });
     </script>
